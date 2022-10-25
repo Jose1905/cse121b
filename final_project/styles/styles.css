@@ -1,0 +1,85 @@
+body {
+    background: url("../futbol.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+.teambtn {
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+ 
+.dropdown:hover .teambtn {
+    background-color: #3e8e41;
+}
+
+.dropdown-team {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-team p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-team p:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-team {
+    display: block;
+}
+
+.contenedor {
+width: 50%;
+margin: 150px auto auto auto;
+padding: 50px 10px;
+background: #3f2844;
+opacity: 0.8;
+display: grid;
+text-align: center;
+justify-content: center;
+justify-items: center;
+grid-template-columns: 296px 75px 296px;
+grid-template-rows: repeat(2, auto);
+grid-template-areas:
+    "img1 versus img2"
+    "nombre versus nombre2";
+}
+#img1 {
+grid-area: img1;
+}
+#versus {
+grid-area: versus;
+padding: 40px 0;
+}
+#img2 {
+grid-area: img2;
+}
+
+#nombre {
+grid-area: nombre;
+}
+#nombre2 {
+grid-area: nombre2;
+}
+.contenedor p {
+color: #fff;
+font-size: 24px;
+display: block;
+}

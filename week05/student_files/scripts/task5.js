@@ -121,17 +121,14 @@ async function getTemples(url) {
     }
 }
 
-const articleList = document.getElementById('temples');
-
 // Step 7: Declare a function named reset that clears all of the <article> elements from the HTML element with an ID of temples
 async function reset() {
-    articleList.forEach(article => {
-        article.parentNode.removeChild(article);
-    })
+    document.getElementById('temples').innerHTML = '';
 }
 
 const sortButton = document.getElementById('sortBy');
 // Step 8: Declare a function named sortBy that does the following:
+
 function sortBy() {
 // - Calls the reset function
     reset();
